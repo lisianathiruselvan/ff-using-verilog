@@ -144,7 +144,7 @@ nand(B, T, clock, Q);
 nand(Q, A, Qbar);
 nand(Qbar, B, Q);
 endmodule
-```3
+```
 RTL LOGIC FOR FLIPFLOPS
 SR Flip-flop
 ![sr_ff_rtl](https://user-images.githubusercontent.com/119389971/214278527-bc63ff9c-d5e1-480a-a079-2826a1030b8a.png)
