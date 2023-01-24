@@ -17,12 +17,14 @@ This circuit has two inputs S & R and two outputs Qtt & Qtt'.  The operation of 
 
 Here, Qtt & Qt+1t+1 are present state & next state respectively. So, SR flip-flop can be used for one of these three functions such as Hold, Reset & Set based on the input conditions, when positive transition of clock signal is applied. The following table shows the characteristic table of SR flip-flop. Present Inputs Present State Next State
 
-![167908180-5fc9d589-1cb5-41f5-b2c8-927e04f5f387](https://user-images.githubusercontent.com/119389971/214277656-8902936c-6e90-45e9-9e8a-ecf9991cd9f0.png)
 
+
+![167908180-5fc9d589-1cb5-41f5-b2c8-927e04f5f387](https://user-images.githubusercontent.com/119389971/214279495-6f5eaceb-fe7c-4e97-8730-91fda9408049.png)
 
 By using three variable K-Map, we can get the simplified expression for next state, Qt+1t+1. The three variable K-Map for next state, Qt+1t+1 is shown in the following figure.
-![167908214-25b30a54-db20-4bcb-9385-5f93a1982a09](https://user-images.githubusercontent.com/119389971/214277684-3b70971c-8fa6-4a1e-9fee-41c1365c5b86.png)
 
+
+![167908214-25b30a54-db20-4bcb-9385-5f93a1982a09](https://user-images.githubusercontent.com/119389971/214279556-52738810-6c30-43e2-96af-4953173b25ad.png)
 
 
 The maximum possible groupings of adjacent ones are already shown in the figure. Therefore, the simplified expression for next state Qt+1t+1 is Q(t+1)=S+R′Q(t)Q(t+1)=S+R′Q(t)
@@ -92,9 +94,9 @@ End the program
 PROGRAM
 Program for flipflops and verify its truth table in quartus using Verilog programming.
 
-Developed by: Ronick Aakshath P
+Developed by: lisiana t
 
-RegisterNumber: 22007303
+RegisterNumber: 22006964
 
 SR Flip-flop
 module sr_flipflop(S, R, clock, Q, Qbar);
