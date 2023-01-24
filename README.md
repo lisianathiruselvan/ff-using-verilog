@@ -17,14 +17,12 @@ This circuit has two inputs S & R and two outputs Qtt & Qtt'.  The operation of 
 
 Here, Qtt & Qt+1t+1 are present state & next state respectively. So, SR flip-flop can be used for one of these three functions such as Hold, Reset & Set based on the input conditions, when positive transition of clock signal is applied. The following table shows the characteristic table of SR flip-flop. Present Inputs Present State Next State
 
+![167908180-5fc9d589-1cb5-41f5-b2c8-927e04f5f387](https://user-images.githubusercontent.com/119389971/214277656-8902936c-6e90-45e9-9e8a-ecf9991cd9f0.png)
 
-
-![167908180-5fc9d589-1cb5-41f5-b2c8-927e04f5f387](https://user-images.githubusercontent.com/119389971/214279495-6f5eaceb-fe7c-4e97-8730-91fda9408049.png)
 
 By using three variable K-Map, we can get the simplified expression for next state, Qt+1t+1. The three variable K-Map for next state, Qt+1t+1 is shown in the following figure.
+![167908214-25b30a54-db20-4bcb-9385-5f93a1982a09](https://user-images.githubusercontent.com/119389971/214277684-3b70971c-8fa6-4a1e-9fee-41c1365c5b86.png)
 
-
-![167908214-25b30a54-db20-4bcb-9385-5f93a1982a09](https://user-images.githubusercontent.com/119389971/214279556-52738810-6c30-43e2-96af-4953173b25ad.png)
 
 
 The maximum possible groupings of adjacent ones are already shown in the figure. Therefore, the simplified expression for next state Qt+1t+1 is Q(t+1)=S+R′Q(t)Q(t+1)=S+R′Q(t)
@@ -37,9 +35,9 @@ This circuit has single input D and two outputs Qtt & Qtt’. The operation of D
 
 ![167908342-e03f0cbb-5958-43bb-b74a-5e3ec2341675](https://user-images.githubusercontent.com/119389971/214277966-05539971-cd75-4715-8ba3-11971b8acc8e.png)
 D flip-flop.!
-[167910325-aeef0739-0a54-40e2-bebd-6f5fa0cad10e](https://user-images.githubusercontent.com/119389971/214278064-040b37c6-6f1f-4e65-bb12-1dae6f2bfb0c.png)
 
 
+![167910325-aeef0739-0a54-40e2-bebd-6f5fa0cad10e](https://user-images.githubusercontent.com/119389971/214280405-94df33f7-0f08-4a46-9e86-17a34eeb4df2.png)
 
 Therefore, D flip-flop always Hold the information, which is available on data input, D of earlier positive transition of clock signal. From the above state table, we can directly write the next state equation as Qt+1t+1 = D
 
@@ -94,11 +92,11 @@ End the program
 PROGRAM
 Program for flipflops and verify its truth table in quartus using Verilog programming.
 
-Developed by: lisiana t
+Developed by: Ronick Aakshath P
 
-RegisterNumber: 22006964
+RegisterNumber: 22007303
 
-SR Flip-flop
+## SR Flip-flop
 module sr_flipflop(S, R, clock, Q, Qbar);
 input S, R, clock;
 output Q, Qbar;
@@ -108,7 +106,7 @@ nand(Y, R, clock);
 nand(Q, X, Qbar);
 nand(Qbar, Y, Q);
 endmodule
-D Flip-flop
+## D Flip-flop
 module d_flipflop(D, clock, Q, Qbar);
 input D, clock;
 output Q, Qbar;
@@ -119,7 +117,7 @@ nand(Y, Dbar, clock);
 nand(Q, X, Qbar);
 nand(Qbar, Y, Q);
 endmodule
-JK Flip-flop
+## JK Flip-flop
 module jk_flipflop(J, K, clock, Q, Qbar);
 input J, K, clock;
 output Q, Qbar;
@@ -129,7 +127,7 @@ nand(S, K, clock, Q);
 nand(Q, P, Qbar);
 nand(Qbar, S, Q);
 endmodule
-T Flip-flop
+## T Flip-flop
 module t_flipflop(T, clock, Q, Qbar);
 input T, clock;
 output Q, Qbar;
