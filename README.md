@@ -84,7 +84,7 @@ Here, Qtt & Qt+1t+1 are present state & next state respectively. So, T flip-flop
 
 From the above characteristic table, we can directly write the next state equation as Q(t+1)=T′Q(t)+TQ(t)′ ⇒Q(t+1)=T⊕Q(t)
 
-Procedure
+## Procedure
 Using NAND gates and wires construct SR Flip-flop
 Repeat same steps to construct JK, D, T flipflops
 Find RTL logic and timing diagram for all flipflops
@@ -92,11 +92,12 @@ End the program
 PROGRAM
 Program for flipflops and verify its truth table in quartus using Verilog programming.
 
-Developed by: Ronick Aakshath P
+Developed by: lisiana t
 
-RegisterNumber: 22007303
+RegisterNumber: 22006964
 
 ## SR Flip-flop
+```
 module sr_flipflop(S, R, clock, Q, Qbar);
 input S, R, clock;
 output Q, Qbar;
@@ -106,7 +107,9 @@ nand(Y, R, clock);
 nand(Q, X, Qbar);
 nand(Qbar, Y, Q);
 endmodule
+```
 ## D Flip-flop
+```
 module d_flipflop(D, clock, Q, Qbar);
 input D, clock;
 output Q, Qbar;
@@ -117,7 +120,9 @@ nand(Y, Dbar, clock);
 nand(Q, X, Qbar);
 nand(Qbar, Y, Q);
 endmodule
+```
 ## JK Flip-flop
+```
 module jk_flipflop(J, K, clock, Q, Qbar);
 input J, K, clock;
 output Q, Qbar;
@@ -127,7 +132,9 @@ nand(S, K, clock, Q);
 nand(Q, P, Qbar);
 nand(Qbar, S, Q);
 endmodule
+```
 ## T Flip-flop
+```
 module t_flipflop(T, clock, Q, Qbar);
 input T, clock;
 output Q, Qbar;
@@ -137,6 +144,7 @@ nand(B, T, clock, Q);
 nand(Q, A, Qbar);
 nand(Qbar, B, Q);
 endmodule
+```3
 RTL LOGIC FOR FLIPFLOPS
 SR Flip-flop
 ![sr_ff_rtl](https://user-images.githubusercontent.com/119389971/214278527-bc63ff9c-d5e1-480a-a079-2826a1030b8a.png)
