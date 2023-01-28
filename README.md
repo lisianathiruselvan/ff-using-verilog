@@ -1,7 +1,10 @@
 # ff-using-verilog
 AIM: To implement all the flipflops using verilog and validating their functionality using their functional tables
+
 HARDWARE REQUIRED: – PC, Cyclone II , USB flasher
+
 SOFTWARE REQUIRED: Quartus prime
+
 THEORY
 SR Flip-Flop SR flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, SR latch operates with enable signal. The circuit diagram of SR flip-flop is shown in the following figure.
 ![167910294-bb550548-b1dc-4cba-9044-31d9037d476b](https://user-images.githubusercontent.com/119389971/214277578-575f8b1d-dcad-4efa-b051-3b003971b116.png)
@@ -147,6 +150,7 @@ endmodule
 ```
 RTL LOGIC FOR FLIPFLOPS
 SR Flip-flop
+
 ![sr_ff_rtl](https://user-images.githubusercontent.com/119389971/214278527-bc63ff9c-d5e1-480a-a079-2826a1030b8a.png)
 
 
@@ -157,6 +161,7 @@ D Flip-flop
 
 
 JK Flip-flop
+
 ![jk_ff_rtl](https://user-images.githubusercontent.com/119389971/214278600-f24f454d-cf23-402d-aafe-d284325b17fe.png)
 
 
@@ -172,6 +177,7 @@ SR Flip-flop
 ![sr_ff_td](https://user-images.githubusercontent.com/119389971/214278653-27c75245-2340-4a29-91cf-c1b80b013236.png)
 
 D Flip-flop
+
 ![d_ff_td](https://user-images.githubusercontent.com/119389971/214278681-23a16629-ca1e-47c3-b935-b51da7c79114.png)
 
 
